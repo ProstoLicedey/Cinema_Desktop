@@ -1,0 +1,51 @@
+﻿<Page x:Class="Cinema_Desktop.Pages.AuthReg.RegistrationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cinema_Desktop.Pages.AuthReg"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RegistrationPage">
+
+    <Grid>
+        <Border Margin="0,20,0,0" HorizontalAlignment="Center" Height="378" Width="250"  BorderBrush="Silver" BorderThickness="2" CornerRadius="8,8,8,8">
+        <StackPanel  HorizontalAlignment="Center" >
+            <Label Height="39" Content="Фамилия" HorizontalAlignment="Center" FontSize="15" FontStyle="Italic" FontWeight="Bold" Foreground="Lavender"/>
+            <TextBox  Name="Surname"  Height="18" Width="200" ></TextBox>
+            <Label Height="35" Content="Имя" HorizontalAlignment="Center" FontSize="15" FontStyle="Italic" FontWeight="Bold" Foreground="Lavender"></Label>
+            <TextBox  Name="Name" Height="18"  Width="200" ></TextBox>
+            <Label Height="39" Content="Дата рождения" HorizontalAlignment="Center" FontSize="15" FontStyle="Italic" FontWeight="Bold" Foreground="Lavender"/>
+            <DatePicker  Name="Date" Width="200"/>
+            <Label Height="39" Content="Номер телефона" HorizontalAlignment="Center" FontSize="15" FontStyle="Italic" FontWeight="Bold" Foreground="Lavender"/>
+            <StackPanel Orientation="Horizontal" Width="200">
+                <TextBox   Height="18" Width="20" Text="+7" IsEnabled="False"></TextBox>
+                <TextBox TextCompositionManager.PreviewTextInput="IfnotNumber"  Width="200" Name="Phone" Height="18"  ></TextBox>
+            </StackPanel>
+
+            <Label Height="39" Content="Пароль" HorizontalAlignment="Center" FontSize="15" FontStyle="Italic" FontWeight="Bold" Foreground="Lavender"/>
+            <PasswordBox   Name="Password" Height="18" Width="200" Cursor=""/>
+            <StackPanel Orientation="Horizontal">
+                <Label  Height="39" Content="Посмотреть пароль" HorizontalAlignment="Center" FontSize="12" FontStyle="Italic" Foreground="Lavender"/>
+                <CheckBox Name="Check" Margin="0,10,0,0" ClickMode="Release" />
+            </StackPanel>
+
+
+
+            <Button Name="Registr_click"  HorizontalAlignment="Stretch" Content = "Регистрация" Opacity="0.7" Height="30" Width="119" Margin="30,15,30,20" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" Click="Registr_click_1" >
+                <Button.Template >
+                    <ControlTemplate TargetType="{x:Type Button}" >
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="8,8,8,8">
+                            <Border.Background>
+                                <Brush>#FFDDDDDD</Brush>
+                            </Border.Background>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <CheckBox Content="CheckBox"/>
+        </StackPanel>
+        </Border>
+    </Grid>
+</Page>

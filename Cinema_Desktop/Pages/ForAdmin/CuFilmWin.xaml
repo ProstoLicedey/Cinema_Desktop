@@ -1,0 +1,25 @@
+﻿<Window x:Class="Cinema_Desktop.Pages.ForAdmin.CuFilmWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cinema_Desktop.Pages.ForAdmin"
+        mc:Ignorable="d"
+        Title="CuFilmWin" Height="450" Width="250">
+    <Grid  Background="#2c2c2c">
+        <StackPanel Background="#2c2c2c" Margin="10,10,10,10">
+
+            <Label Content="Название:" Foreground="White" FontSize="17" />
+            <TextBox x:Name="NameF" Width="150" HorizontalAlignment="Left" />
+            <Label Content="Описание:" Foreground="White" FontSize="17" />
+            <TextBox x:Name="DicsF" Width="150" HorizontalAlignment="Left" />
+            <Label Content="Возрастное ограничение:" Foreground="White" FontSize="17" />
+
+            <TextBox x:Name="AgeF" Width="150" HorizontalAlignment="Left" PreviewTextInput="NumberValidationTextBox" MaxLength="2" TextChanged="TextChangedd" />
+            <Label Content="Картинка:" Foreground="White" FontSize="17" />
+            <TextBox x:Name="ImgF" Width="150" HorizontalAlignment="Left" />
+            <Button Click="Create_Click" Content="Отправить" Height="40" Width="140" FontSize="25" HorizontalAlignment="Center" Margin="0,40,0,0"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

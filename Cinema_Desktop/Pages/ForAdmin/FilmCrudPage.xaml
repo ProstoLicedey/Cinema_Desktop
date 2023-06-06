@@ -1,0 +1,34 @@
+﻿<Page x:Class="Cinema_Desktop.Pages.ForAdmin.FilmCrudPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cinema_Desktop.Pages.ForAdmin"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="FilmCrudPage">
+    <StackPanel Background="#2c2c2c" >
+        <Button Margin="20" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content = "Фильмы" Opacity="0.7" Height="57" Width="200"  FontSize="24" FontWeight="Bold" Click="Bron_Click" >
+            <Button.Template >
+                <ControlTemplate TargetType="{x:Type Button}" >
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="25,25,25,25">
+                        <Border.Background>
+                            <Brush>#FF423189</Brush>
+                        </Border.Background>
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label Content="Фильмы:" Foreground="White" FontSize="35" HorizontalAlignment="Stretch" Height="54" Margin="60,0,0,0"/>
+           
+        
+        <DataGrid HorizontalAlignment="Center" AutoGenerateColumns="True" x:Name="DataGrids" Height="250" Width="600" Background="#2c2c2c" />
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Click="Create_Click" Content="Добавить" Height="40" Width="140" HorizontalAlignment="Left" Margin="20,10,0,0" FontSize="25" Background="DarkSeaGreen"/>
+            <Button Content="Изменить" Height="40" Width="140" HorizontalAlignment="Center" Margin="20,10,0,0" FontSize="25" Background="Yellow" Click="Button_Click_1"/>
+            <Button Content="Удалить" Height="40" Width="140" HorizontalAlignment="Right" Margin="20,10,0,0" FontSize="25" Background="LightCoral" Click="Button_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Page>

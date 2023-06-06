@@ -1,0 +1,297 @@
+﻿<Page x:Class="Cinema_Desktop.Pages.ForClient.Zal"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cinema_Desktop.Pages.ForClient"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="Zal">
+    <Page.Resources>
+        <Style TargetType="Button" x:Key="mesto">
+            <!--BasedOn="{StaticResourse DocButton}" x:Key="ActivDocButton"-->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="7"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Control.Width" Value="35" />
+            <Setter Property="Control.Margin" Value="5" />
+            <Setter Property="Control.Height" Value="35" />
+            <Setter Property="Control.Background" Value="Green" />
+        </Style>
+
+        <!--<Style TargetType="Button" x:Key="DocButton" >
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.Setters>
+                        <Setter Property="Opacity" Value="0.5"></Setter>
+                    </Trigger.Setters>
+                </Trigger>
+            </Style.Triggers>
+        </Style>-->
+    </Page.Resources>
+    <Grid>
+        <StackPanel Background="#2c2c2c" HorizontalAlignment="Stretch" >
+           
+           
+
+            <StackPanel>
+                <!--описание фильма-->
+                <StackPanel Orientation="Horizontal" Margin="20,20,0,20">
+
+                    <Ellipse Width="120" Height="120">
+                        <Ellipse.Fill>
+                            <ImageBrush x:Name="ImageFilm" ImageSource="\image/nophoto1.png"  Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <StackPanel Margin="20,0,0,0" >
+                        <Label Name="NameFilm"  Content="Название фильма" Foreground="White"  FontWeight="Bold" FontSize="48" />
+                        <StackPanel  Orientation="Horizontal">
+                            <Label  Name="Date" Foreground="White" Content="25 Сентября 15:00" Margin="0,0,10,0"/>
+                            <Label  Name="zal" Foreground="White" Content="Зал 1" Margin="0,0,15,0"/>
+                            <Label  Name="Prise" Foreground="White" Content="350₽" Margin="0,0,15,0"/>
+                            <Label Name="Age" Foreground="White" Content="12+" Margin="0,0,10,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+                <!--экран проектора-->
+                <Border  BorderBrush="White"  Width="250" Height="25" BorderThickness="3,3,3,3" CornerRadius="0,0,10,10" >
+                    <Border.Effect>
+                        <DropShadowEffect/>
+                    </Border.Effect>
+
+                    <TextBlock Foreground="White" FontSize="16" HorizontalAlignment="Center" >Экран</TextBlock>
+                </Border>
+                <!--все места-->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <!--номер ряда-->
+                    <StackPanel>
+                        <Label Content="1" FontSize="30" Foreground="White" FontWeight="Bold" FontStyle="Italic" FontFamily="Cascadia Code" />
+                        <Label Content="2" FontSize="30" Foreground="White" FontWeight="Bold" FontStyle="Italic" FontFamily="Cascadia Code" />
+                        <Label Content="3" FontSize="30" Foreground="White" FontWeight="Bold" FontStyle="Italic" FontFamily="Cascadia Code" />
+                        <Label Content="4" FontSize="30" Foreground="White" FontWeight="Bold" FontStyle="Italic" FontFamily="Cascadia Code" />
+                        <Label Content="5" FontSize="30" Foreground="White" FontWeight="Bold" FontStyle="Italic" FontFamily="Cascadia Code" />
+                        <Label Content="6" FontSize="30" Foreground="White" FontWeight="Bold" FontStyle="Italic" FontFamily="Cascadia Code" />
+                        <Label Content="7" FontSize="30" Foreground="White" FontWeight="Bold" FontStyle="Italic" FontFamily="Cascadia Code" />
+                        <Label Content="8" FontSize="30" Foreground="White" FontWeight="Bold" FontStyle="Italic" FontFamily="Cascadia Code" />
+                        <Label Content="9" FontSize="30" Foreground="White" FontWeight="Bold" FontStyle="Italic" FontFamily="Cascadia Code" />
+                        <Label Content="10" FontSize="30" Foreground="White" FontWeight="Bold" FontStyle="Italic" FontFamily="Cascadia Code" />
+                    </StackPanel>
+                    <StackPanel Name="Mests"  >
+                        <!--1ряд-->
+                        <StackPanel Name="Read1" Orientation="Horizontal">
+                            <Button Name="r1m1" Click="mesto_click" Style="{StaticResource mesto}"  ToolTip="Ряд 1 Место 1" Opacity="1"  />
+                            <Button Name="r1m2" Click="mesto_click" Style="{StaticResource mesto}" ToolTip="Ряд 1 Место 2"  />
+                            <Button Name="r1m3" Click="mesto_click" Style="{StaticResource mesto}" ToolTip="Ряд 1 Место 3"  />
+                            <Button Name="r1m4" Click="mesto_click" Style="{StaticResource mesto}" ToolTip="Ряд 1 Место 4"  />
+                            <Button Name="r1m5" Click="mesto_click" Style="{StaticResource mesto}" ToolTip="Ряд 1 Место 5"  />
+                            <Button Name="r1m6" Click="mesto_click" Style="{StaticResource mesto}" ToolTip="Ряд 1 Место 6"  />
+                            <Button Name="r1m7" Click="mesto_click" Style="{StaticResource mesto}" ToolTip="Ряд 1 Место 7"  />
+                            <Button Name="r1m8" Click="mesto_click" Style="{StaticResource mesto}" ToolTip="Ряд 1 Место 8"  />
+                            <Button Name="r1m9" Click="mesto_click" Style="{StaticResource mesto}" ToolTip="Ряд 1 Место 9"   />
+                            <Button Name="r1m10" Click="mesto_click" Style="{StaticResource mesto}" ToolTip="Ряд 1 Место 10"/>
+                            <Button Name="r1m11" Click="mesto_click" Style="{StaticResource mesto}" ToolTip="Ряд 1 Место 11"/>
+                            <Button Name="r1m12" Click="mesto_click" Style="{StaticResource mesto}" ToolTip="Ряд 1 Место 12"/>
+                        </StackPanel>
+                        <!--2ряд-->
+                        <StackPanel  Name="Read2" Orientation="Horizontal">
+                            <Button Name="r2m1" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r2m2" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r2m3" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r2m4" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r2m5" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r2m6" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r2m7" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r2m8" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r2m9" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r2m10" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r2m11" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r2m12" Click="mesto_click" Style="{StaticResource mesto}"/>
+                        </StackPanel>
+                        <!--3ряд-->
+                        <StackPanel Name="Read3" Orientation="Horizontal">
+                            <Button Name="r3m1" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r3m2" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r3m3" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r3m4" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r3m5" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r3m6" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r3m7" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r3m8" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r3m9" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r3m10" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r3m11" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r3m12" Click="mesto_click" Style="{StaticResource mesto}"/>
+                        </StackPanel>
+                        <!--4ряд-->
+                        <StackPanel  Name="Read4" Orientation="Horizontal">
+                            <Button Name="r4m1" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r4m2" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r4m3" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r4m4" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r4m5" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r4m6" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r4m7" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r4m8" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r4m9" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r4m10" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r4m11" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r4m12" Click="mesto_click" Style="{StaticResource mesto}"/>
+                        </StackPanel>
+                        <!--5ряд-->
+                        <StackPanel Name="Read5" Orientation="Horizontal">
+                            <Button Name="r5m1" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r5m2" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r5m3" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r5m4" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r5m5" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r5m6" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r5m7" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r5m8" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r5m9" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r5m10" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r5m11" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r5m12" Click="mesto_click" Style="{StaticResource mesto}"/>
+                        </StackPanel>
+                        <!--6ряд-->
+                        <StackPanel  Name="Read6" Orientation="Horizontal">
+                            <Button Name="r6m1" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r6m2" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r6m3" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r6m4" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r6m5" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r6m6" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r6m7" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r6m8" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r6m9" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r6m10" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r6m11" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r6m12" Click="mesto_click" Style="{StaticResource mesto}"/>
+                        </StackPanel>
+                        <!--7ряд-->
+                        <StackPanel Name="Read7" Orientation="Horizontal">
+                            <Button Name="r7m1" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r7m2" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r7m3" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r7m4" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r7m5" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r7m6" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r7m7" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r7m8" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r7m9" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r7m10" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r7m11" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r7m12" Click="mesto_click" Style="{StaticResource mesto}"/>
+                        </StackPanel>
+                        <!--8ряд-->
+                        <StackPanel Name="Read8" Orientation="Horizontal">
+                            <Button Name="r8m1" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r8m2" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r8m3" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r8m4" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r8m5" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r8m6" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r8m7" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r8m8" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r8m9" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r8m10" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r8m11" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r8m12" Click="mesto_click" Style="{StaticResource mesto}"/>
+                        </StackPanel>
+                        <!--9ряд-->
+                        <StackPanel Name="Read9" Orientation="Horizontal">
+                            <Button Name="r9m1" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r9m2" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r9m3" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r9m4" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r9m5" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r9m6" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r9m7" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r9m8" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r9m9" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r9m10" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r9m11" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r9m12" Click="mesto_click" Style="{StaticResource mesto}"/>
+                        </StackPanel>
+                        <!--10ряд-->
+                        <StackPanel Name="Read10" Orientation="Horizontal">
+                            <Button Name="r10m1" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r10m2" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r10m3" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r10m4" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r10m5" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r10m6" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r10m7" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r10m8" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r10m9" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r10m10" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r10m11" Click="mesto_click" Style="{StaticResource mesto}"/>
+                            <Button Name="r10m12" Click="mesto_click" Style="{StaticResource mesto}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <!--нижние кнопки-->
+        <StackPanel HorizontalAlignment="Right" Margin="0,5,02,0" VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                <Rectangle  RadiusX="5" RadiusY="5" Fill="Green" Width="25" Height="25" Margin="5" />
+                <Label Content="Место свободно" Foreground="White" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                <Rectangle  RadiusX="5" RadiusY="5" Fill="Gold" Width="25" Height="25" Margin="5" />
+                <Label Content="Выбранное место" Foreground="White" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                <Rectangle  RadiusX="5" RadiusY="5" Fill="DarkRed" Width="25" Height="25" Margin="5" />
+                <Label Content="Место Занято" Foreground="White" FontSize="14" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <Label Name="LabelCol" Content="Выбраных мест: 0" Foreground="White" FontSize="14" HorizontalAlignment="Stretch"/>
+            <WrapPanel  >
+
+
+
+                <Button  Name="Cancel"  HorizontalAlignment="Right" VerticalAlignment="Bottom" Content = "Сбросить" Opacity="0.7" Height="57" Width="120" Margin="0,0,8,20" FontSize="24" FontWeight="Bold" Click="Cancel_Click"  >
+                    <Button.Template >
+                        <ControlTemplate TargetType="{x:Type Button}" >
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="25,25,25,25">
+                                <Border.Background>
+                                    <Brush>#FFFFE57C</Brush>
+                                </Border.Background>
+                                <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+
+                <Button Click="Ofform"  HorizontalAlignment="Right" VerticalAlignment="Bottom" Content = "Оформить" Opacity="0.7" Height="57" Width="150" Margin="0,0,10,20" FontSize="24" FontWeight="Bold" >
+                    <Button.Template >
+                        <ControlTemplate TargetType="{x:Type Button}" >
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="25,25,25,25">
+                                <Border.Background>
+                                    <Brush>#FF177245</Brush>
+                                </Border.Background>
+                                <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+            </WrapPanel>
+        </StackPanel>
+
+    </Grid>
+
+</Page>
